@@ -2,10 +2,11 @@ package com.ale.minichatapp;
 
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import com.ale.minichatapp.handler.ApiUtils;
 import com.ale.minichatapp.handler.SOService;
-import com.ale.minichatapp.ui.main.MainFragment;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -18,18 +19,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
-                    .commitNow();
-        }
+//        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
+//                .findFragmentById(R.id.nav_host_fragment_main);
+//        NavController navController = navHostFragment.getNavController();
 
         soService = ApiUtils.getSOService();
         login();
     }
 
     public void login() {
-        soService.login().enqueue(new Callback<String>() {
+        soService.test().enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
 

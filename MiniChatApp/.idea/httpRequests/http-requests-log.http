@@ -1,9 +1,0 @@
-GET http://192.168.1.4:8080/api/public/test
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-13T194135.200.txt
-
-###
-
