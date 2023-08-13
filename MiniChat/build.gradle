@@ -1,10 +1,7 @@
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.2'
-//    id 'org.springframework.security' version '6.1.2'
-//    id 'org.springframework' version '6.0.11'
     id 'io.spring.dependency-management' version '1.1.2'
-//    id 'com.fasterxml.jackson.core' version '2.15.2'
 }
 
 group = 'com.ale'
@@ -30,6 +27,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 
     implementation 'com.fasterxml.jackson.core:jackson-core:2.15.2'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
@@ -37,6 +35,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     runtimeOnly 'com.mysql:mysql-connector-j'
+
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    implementation 'javax.xml.bind:jaxb-api:2.3.0'
+    implementation 'org.modelmapper:modelmapper:2.4.4'
+
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
 //    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
