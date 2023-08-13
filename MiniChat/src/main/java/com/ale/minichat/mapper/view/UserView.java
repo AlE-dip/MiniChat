@@ -1,6 +1,6 @@
 package com.ale.minichat.mapper.view;
 
-import com.ale.minichat.entity.User;
+import com.ale.minichat.entity.Role;
 import com.ale.minichat.security.UserInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +16,7 @@ import java.util.UUID;
 public class UserView {
     private UUID uuid;
     private String username;
-    private User.Role role;
+    private Role role;
     private String accessToken;
     private String token;
 

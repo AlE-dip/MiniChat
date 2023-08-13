@@ -1,5 +1,6 @@
 package com.ale.minichat;
 
+import com.ale.minichat.entity.Role;
 import com.ale.minichat.entity.User;
 import com.ale.minichat.service.UserService;
 import org.springframework.boot.SpringApplication;
@@ -19,14 +20,14 @@ public class MiniChatApplication {
                     new User().builder()
                             .username("admin")
                             .password("admin")
-                            .role(User.Role.ADMIN)
+                            .role(Role.ADMIN)
                             .build()
             );
             userService.save(
                     new User().builder()
                             .username("customer")
                             .password("customer")
-                            .role(User.Role.CUSTOMER)
+                            .role(Role.CUSTOMER)
                             .build()
             );
         }

@@ -24,10 +24,4 @@ public class User {
     private String username;
     private String password;
     private Role role;
-
-    @FieldNameConstants(onlyExplicitlyIncluded = true)
-    public enum Role {
-        @FieldNameConstants.Include ADMIN,
-        @FieldNameConstants.Include CUSTOMER
-    }
 }
